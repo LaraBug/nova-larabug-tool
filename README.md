@@ -12,6 +12,21 @@ Laravel Nova Package
 composer require larabug/nova-larabug-tool
 ```
 
+Register the tool inside the `app/Providers/NovaServiceProvider.php` file:
+
+```php
+use Larabug\NovaLarabugTool\NovaLarabugTool;
+
+...
+
+public function tools()
+{
+    return [
+        new NovaLarabugTool
+    ];
+}
+```
+
 ## Screenshot
 
 ![alt text](https://raw.githubusercontent.com/LaraBug/nova-larabug-tool/master/screenshot.png)
