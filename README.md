@@ -29,7 +29,7 @@ public function tools()
 
 ## Screenshot
 
-![alt text](https://raw.githubusercontent.com/LaraBug/nova-larabug-tool/master/screenshot.png)
+![Screenshot Larabug Nova Tool](https://raw.githubusercontent.com/LaraBug/nova-larabug-tool/master/screenshot.png)
 
 
 ## License
