@@ -17,7 +17,7 @@ Nova.booting((Vue, router) => {
         {
             name: 'nova-larabug-show',
             path: '/nova-larabug-tool/:id',
-            component: require('./components/ShowException'),
+            component: require('./components/Exception'),
             props: route => {
                 return {
                     id: route.params.id,

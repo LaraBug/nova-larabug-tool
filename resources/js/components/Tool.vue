@@ -30,7 +30,7 @@
                         <td>
                             <span class="whitespace-no-wrap text-left">
                                 {{ exceptionRecord.created_at }}<br />
-                                {{ exceptionRecord.human_date }}
+                                <span class="text-gray">{{ exceptionRecord.human_date }}</span>
                             </span>
                         </td>
                         <td class="td-fit text-right pr-6">

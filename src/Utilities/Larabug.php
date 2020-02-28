@@ -8,16 +8,17 @@ class Larabug
 {
     private $key;
     private $guzzle;
+    private $baseUrl = 'https://www.larabug.com/api';
 
     public function __construct()
     {
         $this->guzzle = new Client;
-        $this->key = env('LB_KEY');
+        $this->key = config('larabug.login_key');
     }
 
     public function send($url, $method = 'get', $params = [])
     {
-        $r = $this->guzzle->{$method}($url, [
+        $response = $this->guzzle->{$method}($url, [
             'json' => $params,
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->key,
@@ -26,16 +27,16 @@ class Larabug
             ]
         ]);
 
-        return json_decode($r->getBody()->getContents());
+        return json_decode($response->getBody()->getContents());
     }
 
     public function recentExceptions($page = 1)
     {
-        return $this->send('https://www.larabug.com/api/projects/' . env('LB_PROJECT_KEY') . '/exceptions?page=' . $page);
+        return $this->send($this->baseUrl . '/projects/' . config('larabug.project_key') . '/exceptions?page=' . $page);
     }
 
     public function getException($id)
     {
-        return $this->send('https://www.larabug.com/api/projects/' . env('LB_PROJECT_KEY') . '/exceptions/' . $id);
+        return $this->send($this->baseUrl . '/projects/' . config('larabug.project_key') . '/exceptions/' . $id);
     }
 }
