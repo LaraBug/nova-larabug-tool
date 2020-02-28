@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://www.larabug.com" target="_blank"><img width="130" src="https://www.larabug.com/images/icon128x121.png"></a>
+    <a href="https://www.larabug.com" target="_blank"><img width="130" src="https://www.larabug.com/images/larabug-logo-small.png"></a>
 </p>
 
 # LaraBug
@@ -47,5 +47,4 @@ Get these variables at [larabug.com](https://www.larabug.com)
 
 
 ## License
-
 The larabug package is open source software licensed under the [license MIT](http://opensource.org/licenses/MIT)
